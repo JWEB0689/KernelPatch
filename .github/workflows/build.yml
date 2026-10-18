@@ -11,7 +11,7 @@ jobs:
       contents: write
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: "recursive"
           fetch-depth: 0
@@ -61,7 +61,7 @@ jobs:
           mv syscallhook.kpm demo-syscallhook.kpm
 
       - name: Upload elf
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           path: |
             kernel/kpimg.elf-linux
@@ -90,7 +90,7 @@ jobs:
       contents: write
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Generate version
         id: parse_version
         run: |
@@ -126,7 +126,7 @@ jobs:
       contents: write
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: "recursive"
           fetch-depth: 0
@@ -183,7 +183,7 @@ jobs:
       contents: write
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Generate version
         id: parse_version
         run: |
@@ -284,7 +284,7 @@ jobs:
       contents: write
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Generate version
         id: parse_version
         run: |
